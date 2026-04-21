@@ -14,13 +14,13 @@ const gameConfig = {
 
     // Medium mode (3 players)
     3: {
-      attempt: 12, // number of allowed guesses
+      attempt: 15, // number of allowed guesses
       digit: 5     // length of secret number
     },
 
     // Hard mode (4 players)
     4: {
-      attempt: 15, // number of allowed guesses
+      attempt: 20, // number of allowed guesses
       digit: 6     // length of secret number
     }
   }
