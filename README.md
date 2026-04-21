@@ -261,8 +261,8 @@ On socket close:
 | Mode   | Players | Digits | Attempts |
 | ------ | ------- | ------ | -------- |
 | easy   | 2       | 4      | 10       |
-| medium | 3       | 5      | 12       |
-| hard   | 4       | 6      | 15       |
+| medium | 3       | 5      | 15       |
+| hard   | 4       | 6      | 20       |
 
 ---
 
