@@ -14,10 +14,9 @@ The architecture is fully in-memory, event-driven, and optimized for low-latency
 
 The system is composed of four main layers:
 
-1. **HTTP Layer (Express)**
+1. **HTTP Layer (http)**
 
-   * Serves static client files
-   * Handles basic routing
+   * Native Node.js HTTP server acting as the WebSocket upgrade handler
 
 2. **WebSocket Layer (ws)**
 
