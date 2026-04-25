@@ -7,7 +7,7 @@ const app = require("express")();
 require("./utils/ping")(app);
 
 // Create HTTP server from Express app
-const server = http.createServer();
+const server = http.createServer(app);
 const PORT = process.env.PORT || 3000;
 
 // Attach WebSocket server to the HTTP server

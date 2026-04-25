@@ -9,17 +9,9 @@ module.exports = (app) => {
         res.send("GAME is running ✅");
     });
 
-    // Determine server port (Render uses dynamic PORT)
-    const PORT = process.env.PORT || 3000;
-
-    // Start HTTP server
-    app.listen(PORT, () => {
-        console.log(`Web server running on port ${PORT}`);
-    });
-
     // Base URL used for self-pinging (keeps service awake on hosting platforms like Render)
     const GAME_URL = process.env.GAME_URL;
-    
+
     if (!GAME_URL) {
     console.warn("GAME_URL not set, skipping self-ping");
     return;
