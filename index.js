@@ -2,6 +2,10 @@
 const http = require("http");
 const WebSocket = require("ws");
 
+// Call and pass express for pinging
+const app = require("express")();
+require("./utils/ping")(app);
+
 // Create HTTP server from Express app
 const server = http.createServer();
 const PORT = process.env.PORT || 3000;
