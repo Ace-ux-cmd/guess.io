@@ -151,7 +151,10 @@ module.exports = (socket) => {
             if (n !== socket) {
               n.send(JSON.stringify({
                 type: events.guessMade,
-                payload: { guess }
+                payload: { 
+                  guess,
+                tries: room.attempt
+                 }
               }));
 
             } else {
@@ -161,7 +164,8 @@ module.exports = (socket) => {
                   guess,
                   correctPosition: room.lastGuess.correctPosition,
                   result: room.lastGuess.result,
-                  correctDigit: room.lastGuess.correctDigit
+                  correctDigit: room.lastGuess.correctDigitt,
+                tries: room.attempt
                 }
               }));
             }
@@ -200,6 +204,7 @@ module.exports = (socket) => {
       }
       break;
 
+        case "leave_queue": socket.close()
       // Fallback for unknown message types
       default:
         socket.send(JSON.stringify({

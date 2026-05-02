@@ -135,7 +135,7 @@ Additional metrics:
 
 After evaluation:
 
-* Attempt count decreases
+* Attempt count decreases and is sent to the players
 * Last guess stored in room state
 * Results broadcast:
 
@@ -169,6 +169,7 @@ Outcomes:
 | ------- | -------------------- | ---------------------- |
 | "play"  | "{ username, mode }" | Join matchmaking queue |
 | "guess" | "{ guess }"          | Submit number guess    |
+| "leave_queue" |           | Exits queue and returns to homepage    |
 
 ---
 
